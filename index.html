@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Pricing</title>
+    <header>
+        <h1>Plans & Pricing</h1>
+        <p>Welcome to our pricing page. Explore our plans and find the best fit for your needs.</p>
+    </header>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <section class="container">
+        <div class="pricing-table" id="basic-plan">
+            <h2>Basic Plan</h2>
+            <p class="price" id="basic-price">₹19.99/Per Month</p>
+            <div class="features">
+                <p><span class="feature-icon">&#10003;</span> Unlimited Speed</p>
+                <p><span class="feature-icon">&#10008;</span> Unlimited Download</p>
+                <p><span class="feature-icon">&#10008;</span> Unlimited Storage</p>
+            </div>
+            <button onclick="choosePlan('Basic')">Choose</button>
+        </div>
+
+        <div class="pricing-table" id="pro-plan">
+            <h2>Pro Plan</h2>
+            <p class="price" id="pro-price">₹39.99/Per Month</p>
+            <div class="features">
+                <p><span class="feature-icon">&#10003;</span> Unlimited Speed</p>
+                <p><span class="feature-icon">&#10003;</span> Unlimited Download</p>
+                <p><span class="feature-icon">&#10008;</span> Unlimited Storage</p>
+            </div>
+            <button onclick="choosePlan('Pro')">Choose</button>
+        </div>
+
+        <div class="pricing-table" id="premium-plan">
+            <h2>Premium Plan</h2>
+            <p class="price" id="premium-price">₹59.99/Per Month</p>
+            <div class="features">
+                <p><span class="feature-icon">&#10003;</span> Unlimited Speed</p>
+                <p><span class="feature-icon">&#10003;</span> Unlimited Download</p>
+                <p><span class="feature-icon">&#10003;</span> Unlimited Storage</p>
+            </div>
+            <button onclick="choosePlan('Premium')">Choose</button>
+        </div>
+
+        <div class="customization-section">
+            <div class="customization-dropdown">
+                <label for="currency">Change Currency:</label>
+                <div class="dropdown">
+                    <button class="dropbtn" id="currencyDropdownBtn">₹</button>
+                    <div class="dropdown-content" id="currencyDropdown">
+                        <span onclick="selectCurrency('₹')">INR</span>
+                        <span onclick="selectCurrency('$')">USD</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="customization-dropdown">
+                <label for="unit">Change Unit:</label>
+                <div class="dropdown">
+                    <button class="dropbtn" id="unitDropdownBtn">Per Month</button>
+                    <div class="dropdown-content" id="unitDropdown">
+                        <span onclick="selectUnit('month')">Per Month</span>
+                        <span onclick="selectUnit('year')">Per Year</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

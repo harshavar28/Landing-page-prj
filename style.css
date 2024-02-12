@@ -1,0 +1,156 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    height: 80%;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('prj1.jpg');
+    background-size: cover;
+    overflow: auto; 
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+header {
+    text-align: center;
+    color: aliceblue; 
+    margin-bottom: 20px;
+}
+
+.pricing-table {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    margin: 15px;
+    background-image: url('prj1img.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.pricing-table:hover {
+    transform: scale(1.1);
+}
+
+h2 {
+    color: skyblue;
+}
+
+.price {
+    font-size: 1.5em;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.features {
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+.features p {
+    margin: 5px 0;
+}
+
+.feature-icon {
+    margin-right: 5px;
+    color: lightblue;
+    font-size: 1.2em;
+}
+
+.customization-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.customization-dropdown {
+    display: inline-block;
+    margin-right: 40px;
+    color: lightskyblue;
+}
+.customization-dropdown label {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: transparent; 
+    color: aquamarine;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent; 
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.dropdown-content span {
+    color: aliceblue; 
+    padding: 10px;
+    display: block;
+    cursor: pointer;
+}
+
+.dropdown-content span:hover {
+    background-color: semi-transparent;
+    color: black; 
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: transparent;
+}
+.pricing-table button {
+    background-color: dodgerblue;
+    color: lightblue;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.pricing-table button:hover {
+    background-color: #0056b3;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .pricing-table {
+        width: 100%; 
+    }
+
+    .customization-dropdown {
+        display: block;
+        margin: 10px auto;
+    }
+}
