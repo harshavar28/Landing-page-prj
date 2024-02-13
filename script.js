@@ -42,6 +42,15 @@ function updatePrices() {
         proPriceConverted = proPriceInINR ;
         premiumPriceConverted = premiumPriceInINR ;
     }
+    if (unitText === 'Per Year') {
+        basicPriceConverted *= 12;
+        proPriceConverted *= 12;
+        premiumPriceConverted *= 12;
+    } else if (currencySymbol === 'Per Month') {
+    basicPriceConverted = basicPriceInINR ;
+    proPriceConverted = proPriceInINR ;
+    premiumPriceConverted = premiumPriceInINR ;
+    }
 
     basicPrice.textContent = `${currencySymbol}${basicPriceConverted.toFixed(2)}/${unitText}`;
     proPrice.textContent = `${currencySymbol}${proPriceConverted.toFixed(2)}/${unitText}`;
